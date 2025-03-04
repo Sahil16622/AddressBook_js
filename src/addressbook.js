@@ -73,3 +73,11 @@ class Contact {
   function countContacts() {
     return addressBook.reduce((count) => count + 1, 0);
   }
+
+  function addUniqueContact(contact) {
+    if (!isDuplicate(contact)) {
+      addressBook.push(contact);
+    } else {
+      console.error("Duplicate Contact");
+    }
+  }
