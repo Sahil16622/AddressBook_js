@@ -100,3 +100,11 @@ class Contact {
       (contact) => contact.city === cityOrState || contact.state === cityOrState
     ).length;
   }
+
+  function sortByName() {
+    return addressBook.sort(
+      (a, b) =>
+        a.firstName.localeCompare(b.firstName) ||
+        a.lastName.localeCompare(b.lastName)
+    );
+  }
