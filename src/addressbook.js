@@ -70,4 +70,6 @@ class Contact {
     }
   }
 
-
+  function countContacts() {
+    return addressBook.reduce((count) => count + 1, 0);
+  }
